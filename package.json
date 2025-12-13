@@ -1,0 +1,22 @@
+{
+  "name": "nce-dict-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wl98336/nce-dict-server.git"
+  },
+  "keywords": [
+    "nce"
+  ],
+  "author": "wl98336",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wl98336/nce-dict-server/issues"
+  },
+  "homepage": "https://github.com/wl98336/nce-dict-server#readme"
+}
