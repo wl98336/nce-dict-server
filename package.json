@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/wl98336/nce-dict-server/issues"
   },
-  "homepage": "https://github.com/wl98336/nce-dict-server#readme"
+  "homepage": "https://github.com/wl98336/nce-dict-server#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "js-mdict": "^6.0.8"
+  }
 }
