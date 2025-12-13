@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/wl98336/nce-dict-server#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "js-mdict": "^6.0.8"
+    "js-mdict": "^6.0.8",
+    "jsencrypt": "^3.5.4",
+    "jsonwebtoken": "^9.0.3"
   }
 }
