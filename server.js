@@ -104,7 +104,7 @@ app.post("/api/auth/login", async (req, res) => {
     res.status(400).send("Invalid credentials!");
     return;
   }
-  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY, { expiresIn: "2MINS" });
+  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY, { expiresIn: "30MINS" });
   res.json({ message: "Login successfully!", token, username: user.username, role: user.role });
 });
 
@@ -124,3 +124,20 @@ app.get("/api/nce/lookup", (req, res) => {
     res.status(400).send("error: No word input");
   }
 });
+
+const dict = new Mdict.MDX(`${dict_folder}/oalecd9.mdx`);
+app.get("/api/dict/lookup", (req, res) => {
+  let word = req.query.word;
+  if (word) {
+    let data = dict.lookup(word);
+    console.log("cha: " + word, "data:", data);
+    if (data) {
+      res.send(data);
+    } else {
+      res.status(400).send("error: word not found");
+    }
+  } else {
+    res.status(400).send("error: No word input");
+  }
+});
+
